@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+#quote-box {
+  height: 100vh;
+  background-color: blue;
+
+  position: relative;
+}
+#text {
+  height: 250px;
+  width: 500px;
+  background: black;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+#quote-text-info {
+  text-align: center;
+  height: fit-content;
+  flex-basis: 120px;
+  width: 410px;
+  margin: 25px auto;
+}
+#text h3 {
+  text-align: center;
+  display: inline;
+}
+#db-quotes {
+  color: white;
+}
+#author {
+  text-align: right;
+  margin: 20px auto;
+}
+#new-quote {
+  display: inline-flex;
+  width: 410px;
+  margin: 0 auto;
+}
+#tweet-quote {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: blue;
+}
+#tweet-btn {
+  flex-basis: 50px;
+}
+#tmblr-btn {
+  flex-basis: 50px;
+}
+
+#get-quote-btn {
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: blue;
+}
