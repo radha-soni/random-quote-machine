@@ -2,6 +2,10 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
+function getRandomColor() {
+  return Math.floor(Math.random() * 256);
+}
+
 var request = new XMLHttpRequest();
 request.open(
   "GET",
@@ -22,8 +26,30 @@ request.onload = function() {
   }
 
   getRandomQuote();
+
+  let x = document.getElementsByClassName("quote-description");
+  function unknown() {
+    var backgroundColor =
+      "rgb(" +
+      getRandomColor() +
+      "," +
+      getRandomColor() +
+      " ," +
+      getRandomColor() +
+      ")";
+    for (let i = 0; i < x.length; i++) {
+      x[i].style.backgroundColor = backgroundColor;
+    }
+    document.getElementById("text").style.color = backgroundColor;
+  }
+  unknown();
+
   document.getElementById("get-quote-btn").onclick = function() {
+    unknown();
     getRandomQuote();
   };
 };
 request.send();
+// $(document).ready(function() {
+//   ("#tweet-quote").click
+// });

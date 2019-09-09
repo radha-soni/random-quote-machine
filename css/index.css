@@ -3,16 +3,18 @@ body {
   padding: 0;
   font-family: "Raleway", sans-serif;
 }
-#quote-box {
+.quote-description {
   height: 100vh;
-  background-color: blue;
+  /* background-color: blue; */
 
   position: relative;
 }
 #text {
-  height: 250px;
+  border-radius: 5px;
+  height: fit-content;
+  padding: 30px 0;
   width: 500px;
-  background: black;
+  background: white;
   margin: auto;
   position: absolute;
   top: 0;
@@ -28,23 +30,20 @@ body {
   height: fit-content;
   flex-basis: 120px;
   width: 410px;
-  margin: 25px auto;
+  margin: auto auto;
 }
 #text h3 {
   text-align: center;
   display: inline;
 }
-#db-quotes {
-  color: white;
-}
 #author {
   text-align: right;
-  margin: 20px auto;
+  margin: 20px;
 }
 #new-quote {
   display: inline-flex;
   width: 410px;
-  margin: 0 auto;
+  margin: auto auto;
 }
 #tweet-quote {
   height: 40px;
@@ -52,7 +51,7 @@ body {
   border-radius: 5px;
   border: none;
   color: white;
-  background-color: blue;
+  /* background-color: blue; */
 }
 #tweet-btn {
   flex-basis: 50px;
@@ -66,5 +65,5 @@ body {
   border-radius: 5px;
   border: none;
   color: white;
-  background-color: blue;
+  outline: none;
 }

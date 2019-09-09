@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="css/brands.min.css" />
     <title>Random-quote-machine</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
-    <div id="quote-box">
+    <div id="quote-box" class="quote-description">
       <div id="text">
         <div id="quote-text-info">
           <i
@@ -30,18 +31,19 @@
 
         <div id="new-quote">
           <div id="tweet-btn">
-            <button id="tweet-quote">
-              <i class="fab fa-twitter fa-2x"></i>
-            </button>
+            <a href="https://twitter.com/intent/tweet" target="_blank"
+              ><button id="tweet-quote" class="quote-description">
+                <i class="fab fa-twitter fa-2x"></i></button
+            ></a>
           </div>
           <div id="tmblr-btn">
-            <button id="tweet-quote">
+            <button id="tweet-quote" class="quote-description">
               <i class="fab fa-tumblr fa-2x"></i>
             </button>
           </div>
 
           <div id="new-quote-btn">
-            <button id="get-quote-btn">
+            <button id="get-quote-btn" class="quote-description">
               New Quote
             </button>
           </div>
