@@ -8,6 +8,7 @@ body {
   position: relative;
 }
 #quote-box {
+  background: lightblue;
   opacity: 1;
   transition: background-color 1s ease-in;
 }
@@ -23,7 +24,6 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  color: white;
   display: flex;
   flex-direction: column;
 }
@@ -33,15 +33,16 @@ body {
   flex-basis: 120px;
   width: 410px;
   margin: auto auto;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
 }
 #text h3 {
   text-align: center;
   display: inline;
-  opacity: 1;
-  transition: color 1s ease-in;
 }
 
-#author {
+#author-info {
   text-align: right;
   margin: 20px;
 }
@@ -56,6 +57,11 @@ body {
   border-radius: 5px;
   border: none;
   color: white;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  opacity: 1;
+  transition: background-color 1s ease-in;
 }
 #tweet-btn {
   flex-basis: 50px;
@@ -64,12 +70,14 @@ body {
   flex-basis: 50px;
 }
 
-#get-quote-btn {
+#new-quote-btn {
   height: 40px;
   border-radius: 5px;
   border: none;
   color: white;
   outline: none;
+  opacity: 1;
+  transition: background-color 1s ease-in;
 }
 @media only screen and (max-width: 560px) {
   #text {
@@ -85,7 +93,7 @@ body {
   #new-quote {
     justify-content: center;
   }
-  #author {
+  #author-info {
     text-align: center;
   }
 }

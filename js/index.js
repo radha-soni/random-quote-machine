@@ -1,3 +1,6 @@
+const h1 = document.getElementById("quotes-placement");
+const author = document.getElementById("author-info");
+
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
@@ -17,18 +20,15 @@ request.onload = function() {
   let min = 0;
   let max = data.quotes.length;
 
-  const h1 = document.getElementById("quotes-placement");
-  const author = document.getElementById("author");
   function getRandomQuote() {
     var i = getRandomInt(min, max);
     h1.textContent = data.quotes[i].quote;
     author.textContent = data.quotes[i].author;
   }
 
-  getRandomQuote();
-
   let x = document.getElementsByClassName("quote-description");
   function unknownColor() {
+    document.getElementById("quote-text-info").style.opacity = 0;
     var backgroundColor =
       "rgb(" +
       getRandomColor() +
@@ -41,13 +41,23 @@ request.onload = function() {
       x[i].style.backgroundColor = backgroundColor;
     }
 
-    document.getElementById("text").style.color = backgroundColor;
+    setTimeout(() => {
+      getRandomQuote();
+      document.getElementById("quote-text-info").style.color = backgroundColor;
+      document.getElementById("quote-text-info").style.opacity = 1;
+    }, 500);
   }
   unknownColor();
 
   document.getElementById("get-quote-btn").onclick = function() {
     unknownColor();
-    getRandomQuote();
   };
 };
 request.send();
+var tweetBtn = document.getElementById("tweetBtn");
+tweetBtn.onclick = function() {
+  tweetBtn.setAttribute(
+    "href",
+    "https://twitter.com/intent/tweet?hashtags=quote&text=" + h1.textContent
+  );
+};
