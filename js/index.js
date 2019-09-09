@@ -28,7 +28,7 @@ request.onload = function() {
   getRandomQuote();
 
   let x = document.getElementsByClassName("quote-description");
-  function unknown() {
+  function unknownColor() {
     var backgroundColor =
       "rgb(" +
       getRandomColor() +
@@ -40,16 +40,14 @@ request.onload = function() {
     for (let i = 0; i < x.length; i++) {
       x[i].style.backgroundColor = backgroundColor;
     }
+
     document.getElementById("text").style.color = backgroundColor;
   }
-  unknown();
+  unknownColor();
 
   document.getElementById("get-quote-btn").onclick = function() {
-    unknown();
+    unknownColor();
     getRandomQuote();
   };
 };
 request.send();
-// $(document).ready(function() {
-//   ("#tweet-quote").click
-// });
